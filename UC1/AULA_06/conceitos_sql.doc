@@ -1,0 +1,20 @@
+Bancos de dados relacionais serão aqueles que na maioria das vezes vamos utilizar.
+
+SGBD - Sistema Gerenciador e Banco de dados
+É uma ferramenta separada (que será acessada através do mySql ou Sqlight)
+
+Modelagem é o ato de pensar quais dados são necessários para concretizar uma operação.
+Tudo que precisará aparecer numa tabela. 
+
+Neste sentido, há coisas importantes tais como saber
+o tipo de informação que vc vai inserir, (CPF e Telefone, por exemplo são via de regra dados lidos e armazenados como texto)...
+Ps.: Em bases de dados um campo numérico ocupa mais lugar que uma string, porque um número inteiro, por exemplo, é um número que pode ter até 11 dígitos.
+Neste sentido, para bases de dados você só cria campos numéricos se souber que vai fazer operações matemáticas com ele, do contrário não vale a pena.
+
+(1,1) (1,n) (n,n)
+Todo relacionamento de 1 para muitos necessita de uma chave-estrangeira.
+
+cliente, produto e pedido
+
+Quando se faz a cardinalidade o "n" fica onde está a chave estrangeira
+Bolinha cheia identifica a chave primária de cada entidade
