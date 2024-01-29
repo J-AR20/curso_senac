@@ -1,7 +1,9 @@
 import pandas as pd
 
 # Caminho do arquivo Excel
-caminho_arquivo = 'D:/CURSOS/BIG DATA - SENAC/UC2/AULA_05/veiculos.xlsx'
+caminho_arquivo = 'D:/CURSOS/BIG DATA - SENAC/UC2/AULA_05/veiculos.xlsx' # computador de casa
+caminho_arquivo = 'xxxyyy/UC2/AULA_05/veiculos.xlsx' # computador do trabalho
+caminho_arquivo = 'penDrive/UC2/AULA_05/veiculos.xlsx' # p trabalhar do Senac
 
 # Carregar o arquivo Excel em um DataFrame
 dados = pd.read_excel(caminho_arquivo)
