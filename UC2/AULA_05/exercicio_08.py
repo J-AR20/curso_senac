@@ -1,13 +1,13 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Caminho do arquivo Excel
 #caminho_arquivo = 'D:/CURSOS/BIG DATA - SENAC/UC2/AULA_05/veiculos.xlsx' # computador de casa
-caminho_arquivo = 'C:/Users/jonas.araujo/OneDrive - IFEC-RJ/Área de Trabalho/data-science/CURSO SENAC/UC2/AULA_05/veiculos.xlsx' # computador do trabalho
-#caminho_arquivo = 'penDrive/UC2/AULA_05/veiculos.xlsx' # p trabalhar do Senac
+#caminho_arquivo = 'C:/Users/jonas.araujo/OneDrive - IFEC-RJ/Área de Trabalho/data-science/CURSO SENAC/UC2/AULA_05/veiculos.xlsx' # computador do trabalho
+caminho_arquivo = 'D:/BIG DATA - SENAC/UC2/AULA_05/veiculos.xlsx'
 
 # Carregar o arquivo Excel em um DataFrame
 dados = pd.read_excel(caminho_arquivo)
-
 
 
 # 1) INTEGRAÇÃO E PREPARAÇÃO DOS DADOS
@@ -68,16 +68,12 @@ print(tx_por_regiao)
 # de veículos por região, ordenadas da maior para a menor. O gráfico deve 
 # ser acompanhado de título e rótulos para cada eixo
 
-import matplotlib.pyplot as plt
-
 # Ordenando os dados do maior para o menor
-resultado_ordenado = tx_por_regiao.sort_values('tx_recuperacao', ascending=False)
-resultado_ordenado
-print(resultado_ordenado.head())
+resultado_ordenado = tx_por_regiao.sort_values(by='tx_recuperacao', ascending=False)
 
 # Criando o gráfico de barras
 plt.figure(figsize=(10, 6))
-plt.bar(resultado_ordenado['regiao'], resultado_ordenado['tx_recuperacao'])
+plt.bar(resultado_ordenado.index, resultado_ordenado['tx_recuperacao'], color='skyblue')
 
 # Adicionando título e rótulos aos eixos
 plt.title('Taxa de recuperação por região')
@@ -86,3 +82,7 @@ plt.ylabel('Taxa de recuperação')
 
 # Mostrando o gráfico
 plt.show()
+
+# retirar linhas horizontais (grid)
+plt.grid(False)
+
