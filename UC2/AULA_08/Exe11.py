@@ -34,6 +34,38 @@ sns.regplot(x='Roubo veículos', y='Furto veículos', data=df_veiculos)
 
 plt.show()
 
+
+
+
+#gráfico de barras
+#definição do local do gráfico
+plt.subplot(2, 2, 1) # uma linha, duas colunas e gráfico na posicao 1 (primeiro quadrante)
+df_veiculos['Roubo veículos'].plot.bar(title='Roubo de veículos por ano')
+plt.xlabel('Ano')
+plt.ylabel('Total roubos')
+
+#definição do local do gráfico
+plt.subplot(2, 2, 2) # uma linha, duas colunas e gráfico na posicao 1 (primeiro quadrante)
+df_veiculos['Furto veículos'].plot.bar(title='Furto de veículos por ano')
+plt.xlabel('Ano')
+plt.ylabel('Total furtos')
+
+#gráfico boxplot
+#definição do local do gráfico
+plt.subplot(2, 2, 3) # uma linha, duas colunas e gráfico na posicao 2 (segundo quadrante)
+df_veiculos.boxplot(column=['Roubo veículos'])
+
+#gráfico boxplot
+#definição do local do gráfico
+plt.subplot(2, 2, 4) # uma linha, duas colunas e gráfico na posicao 2 (segundo quadrante)
+df_veiculos.boxplot(column=['Furto veículos'])
+plt.show()
+
+
+
+
+
+
 '''
 PLOTLY
 '''
