@@ -1,0 +1,24 @@
+Download Apache Spark™ - https://spark.apache.org/downloads.html
+Choose a Spark release: 
+3.5.0 (Sep 13 2023)
+Choose a package type: 
+Pre-built for Apache Hadoop 3.3 and later
+Download Spark: spark-3.5.0-bin-hadoop3.tgz
+
+- cmd
+- cd Downloads
+- tar -zxvf .\spark-3.5.0-bin-hadoop3.tgz
+- Copiar a pasta descompactada para o C:
+
+Instalar java jdk (verificar em arquivos e programas > Java)
+
+VS Code Extensões >> Spark e Hive Tools (Microsoft.com)
+
+Realizar download dados - Portal da Transparência
+- https://portaldatransparencia.gov.br/download-de-dados/bolsa-familia-pagamentos
+- Descompacte o arquivo
+
+NO CMD:
+pip install pyspark
+pip install pyarrow #O PyArrow é uma dependência necessária para a funcionalidade de escrita de dados no formato Parquet pelo Pandas.
+
